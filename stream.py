@@ -38,7 +38,7 @@ if option == "Reds":
 
 if option == "Jet":
     for i in range(306):
-        img=Image.open("Jet\\fig_"+str(i)+".png")
+        img=Image.open("Jet/fig_"+str(i)+".png")
         placeholder.image(img)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
