@@ -30,7 +30,7 @@ st.sidebar.button("Run")
 placeholder=st.empty()
 if option == "Reds":
     for i in range(306):
-        img=Image.open("Reds\\fig_"+str(i)+".png")
+        img=Image.open("Reds/fig_"+str(i)+".png")
         placeholder.image(img)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
