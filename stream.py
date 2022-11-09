@@ -40,7 +40,6 @@ if option == "Jet":
     for i in range(306):
         img=Image.open("Jet\\fig_"+str(i)+".png")
         placeholder.image(img)
-        time.sleep(0.1)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
@@ -48,7 +47,6 @@ if option == "Set2":
     for i in range(306):
         img=Image.open("Set2\\fig_"+str(i)+".png")
         placeholder.image(img)
-        time.sleep(0.1)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
@@ -56,7 +54,6 @@ if option == "Bwr":
     for i in range(306):
         img=Image.open("Bwr\\fig_"+str(i)+".png")
         placeholder.image(img)
-        time.sleep(0.1)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
@@ -64,7 +61,6 @@ if option == "Rainbow":
     for i in range(306):
         img=Image.open("Rainbow\\fig_"+str(i)+".png")
         placeholder.image(img)
-        time.sleep(0.1)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
@@ -72,7 +68,6 @@ if option == "Seismic":
     for i in range(306):
         img=Image.open("Seismic\\fig_"+str(i)+".png")
         placeholder.image(img)
-        time.sleep(0.1)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
