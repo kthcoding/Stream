@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 st.title('신한울 1,2호기 분석결과')
-option = st.sidebar.selectbox("색상옵션을 선택하세요.", ["Jet_ANIM", "Jet_XVID", "Reds_ANIM", "Reds_XVID", "Seismic_ANIM", "Seismic_XVID", "Rainbow_ANIM", "Rainbow_XVID", "Set2_ANIM", "Set2_XVID"])
+option = st.sidebar.selectbox("옵션을 선택하세요.", ["Jet_ANIM", "Jet_XVID", "Reds_ANIM", "Reds_XVID", "Seismic_ANIM", "Seismic_XVID", "Rainbow_ANIM", "Rainbow_XVID", "Set2_ANIM", "Set2_XVID"])
 df= pd.DataFrame({
     '노드번호':range(1,37),
     '노드설명':["Reactor Cavity & Reactor Vessel Annulus", "ICI Chase", "Corium Chamber Room",
