@@ -28,6 +28,7 @@ frame_text = st.sidebar.empty()
 st.sidebar.button("Run")
 placeholder=st.empty()
 if option == "Jet_ANIM":
+    placeholder=st.empty()
     for i in range(306):
         img=Image.open("Jet/fig_"+str(i)+".png")
         placeholder.image(img)
@@ -35,8 +36,8 @@ if option == "Jet_ANIM":
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
-
 if option == "Reds_ANIM":
+    placeholder=st.empty()
     for i in range(306):
         img=Image.open("Reds/fig_"+str(i)+".png")
         placeholder.image(img)
@@ -44,6 +45,7 @@ if option == "Reds_ANIM":
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
 if option == "Seismic_ANIM":
+    placeholder=st.empty()
     for i in range(306):
         img=Image.open("Seismic/fig_"+str(i)+".png")
         placeholder.image(img)
@@ -52,6 +54,7 @@ if option == "Seismic_ANIM":
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
 if option == "Rainbow_ANIM":
+    placeholder=st.empty()
     for i in range(306):
         img=Image.open("Rainbow/fig_"+str(i)+".png")
         placeholder.image(img)
@@ -60,6 +63,7 @@ if option == "Rainbow_ANIM":
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
 if option == "Set2_ANIM":
+    placeholder=st.empty()
     for i in range(306):
         img=Image.open("Set2/fig_"+str(i)+".png")
         placeholder.image(img)
