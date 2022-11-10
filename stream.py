@@ -7,7 +7,7 @@ st.title('신한울 1,2호기 분석결과')
 option = st.sidebar.selectbox("옵션을 선택하세요.", ["Jet_ANIM", "Jet_XVID", "Reds_ANIM", "Reds_XVID", "Seismic_ANIM", "Seismic_XVID", "Rainbow_ANIM", "Rainbow_XVID", "Set2_ANIM", "Set2_XVID"])
 df= pd.DataFrame({
     '노드번호':range(1,37),
-    '노드설명':["Reactor Cavity & Reactor Vessel Annulus   ", "ICI Chase", "Corium Chamber Room   ",
+    '노드설명':["Reactor Cavity & Reactor Vessel Annulus                                    ", "ICI Chase", "Corium Chamber Room",
                 "Reactor Cavity Access Area", "Holdup Volume Tank","S/G#2 Compartment - EL.100'",
                 "S/G#2 Compartment - EL.136.5'", "S/G#1 Compartment - EL.100'", "S/G#1 Compartment - EL.136.5'",
                 "Annular Compartment #2 NW - EL.100'", "Annular Compartment #1 SW - EL.100'", "Annular Compartment #2 NW - EL.114'",
