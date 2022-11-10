@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 st.title('신한울 1,2호기 분석결과')
-option = st.sidebar.selectbox("색상옵션을 선택하세요.", ["Reds", "Jet", "Set2", "Seismic", "Bwr", "Rainbow"])
+option = st.sidebar.selectbox("색상옵션을 선택하세요.", ["Jet_ANIM", "Jet_XVID", "Reds_ANIM", "Reds_XVID", "Seismic_ANIM", "Seismic_XVID", "Rainbow_ANIM", "Rainbow_XVID", "Set2_ANIM", "Set2_XVID"])
 df= pd.DataFrame({
     '노드번호':range(1,37),
     '노드설명':["Reactor Cavity & Reactor Vessel Annulus", "ICI Chase", "Corium Chamber Room",
@@ -22,52 +22,64 @@ df= pd.DataFrame({
 })
 df.set_index("노드번호", inplace=True)
 st.write(df)
-# video_file = open('L:\\k730kth\\kthcoding\\Datavisu\\Sum_XVID_Cont.mp4', 'rb')
-# st.video(video_file.read())
+
 progress_bar = st.sidebar.progress(0)
 frame_text = st.sidebar.empty()
 st.sidebar.button("Run")
 placeholder=st.empty()
-if option == "Reds":
+if option == "Jet_ANIM":
+    for i in range(306):
+        img=Image.open("Jet/fig_"+str(i)+".png")
+        placeholder.image(img)
+        time.sleep(0.1)
+        progress_bar.progress(i/306)
+        frame_text.text("Frame "+str(round(i*100/306))+" %")
+        img.close()
+
+if option == "Reds_ANIM":
     for i in range(306):
         img=Image.open("Reds/fig_"+str(i)+".png")
         placeholder.image(img)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
-
-if option == "Jet":
-    for i in range(306):
-        img=Image.open("Jet/fig_"+str(i)+".png")
-        placeholder.image(img)
-        progress_bar.progress(i/306)
-        frame_text.text("Frame "+str(round(i*100/306))+" %")
-        img.close()
-if option == "Set2":
-    for i in range(306):
-        img=Image.open("Set2/fig_"+str(i)+".png")
-        placeholder.image(img)
-        progress_bar.progress(i/306)
-        frame_text.text("Frame "+str(round(i*100/306))+" %")
-        img.close()
-if option == "Bwr":
-    for i in range(306):
-        img=Image.open("Bwr/fig_"+str(i)+".png")
-        placeholder.image(img)
-        progress_bar.progress(i/306)
-        frame_text.text("Frame "+str(round(i*100/306))+" %")
-        img.close()
-if option == "Rainbow":
-    for i in range(306):
-        img=Image.open("Rainbow/fig_"+str(i)+".png")
-        placeholder.image(img)
-        progress_bar.progress(i/306)
-        frame_text.text("Frame "+str(round(i*100/306))+" %")
-        img.close()
-if option == "Seismic":
+if option == "Seismic_ANIM":
     for i in range(306):
         img=Image.open("Seismic/fig_"+str(i)+".png")
         placeholder.image(img)
+        time.sleep(0.1)
         progress_bar.progress(i/306)
         frame_text.text("Frame "+str(round(i*100/306))+" %")
         img.close()
+if option == "Rainbow_ANIM":
+    for i in range(306):
+        img=Image.open("Rainbow/fig_"+str(i)+".png")
+        placeholder.image(img)
+        time.sleep(0.1)
+        progress_bar.progress(i/306)
+        frame_text.text("Frame "+str(round(i*100/306))+" %")
+        img.close()
+if option == "Set2_ANIM":
+    for i in range(306):
+        img=Image.open("Set2/fig_"+str(i)+".png")
+        placeholder.image(img)
+        time.sleep(0.1)
+        progress_bar.progress(i/306)
+        frame_text.text("Frame "+str(round(i*100/306))+" %")
+        img.close()
+
+if option == "Jet_XVID":
+    video_file = open('Jet/Sum_XVID_FPS3_Jet.mp4', 'rb')
+    st.video(video_file.read())
+if option == "Reds_XVID":
+    video_file = open('Reds/Sum_XVID_FPS3_Reds.mp4', 'rb')
+    st.video(video_file.read())
+if option == "Seismic_XVID":
+    video_file = open('Seismic/Sum_XVID_FPS3_Seismic.mp4', 'rb')
+    st.video(video_file.read())
+if option == "Rainbow_XVID":
+    video_file = open('Rainbow/Sum_XVID_FPS3_Rainbow.mp4', 'rb')
+    st.video(video_file.read())
+if option == "Set2_XVID":
+    video_file = open('Set2/Sum_XVID_FPS3_Set2.mp4', 'rb')
+    st.video(video_file.read())
